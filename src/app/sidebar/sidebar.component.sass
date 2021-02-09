@@ -1,0 +1,77 @@
+.notification-container
+    position: fixed
+    top: 0
+    left: 0
+    width: 300px
+    display: none
+    height: 100%
+    overflow: hidden
+    background: rgba(203,219,83,0.7)
+
+.selected
+    animation: slide-in 0.5s forwards
+    -webkit-animation: slide-in 0.4s forwards
+
+.dismiss
+    animation: slide-out 0.5s forwards
+    -webkit-animation: slide-out 0.4s forwards
+
+@keyframes slide-in
+    0%
+        transform: translateX(0%)
+        width: 0px
+
+    100%
+        transform: translateX(0%)
+
+@-webkit-keyframes slide-in
+    0%
+    -webkit-transform: translateX(0%)
+
+    100%
+    -webkit-transform: translateX(100%)
+
+@keyframes slide-out
+    0%
+        -webkit-transform: translateX(0%)
+
+    100%
+        -webkit-transform: translateX(0%)
+        width: 0
+
+@-webkit-keyframes slide-out
+    0%
+    transform: translateX(100%)
+
+    100%
+    transform: translateX(100%)
+
+#showFilePanel, #closeFilePanel
+    top: 120px
+    left: 15px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    position: absolute
+    box-shadow: -3px 0 5px -2px rgba(0,0,0,.14)
+    background-color: rgba(203,219,83,0.7)
+    animation: mymove 5s infinite
+
+@keyframes mymove
+    0%
+        background: red
+    100%
+        background: yellow
+
+#closeFilePanel
+    left: 20%
+    z-index: 99
+
+#showFilePanel .fas, #closeFilePanel .fas
+    color: #000
+    cursor: pointer
+    top: 32%
+    right: 26%
+    position: absolute
+    font-size: 18px
+    font-weight: 600

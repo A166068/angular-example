@@ -1,0 +1,31 @@
+<nav id="nav-frame" class="navbar navbar-expand-lg navbar-light bg-light" role="navigation"
+    aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="">
+            <img src="./assets/Nexent_Logo.png" max-height="5px">
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav navbar-end">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Products<router-outlet></router-outlet></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/integrations" routerLinkActive="active">Integrations<router-outlet></router-outlet></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="login_tab()" routerLinkActive="active"><router-outlet></router-outlet>
+                    Sign In
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
